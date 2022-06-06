@@ -17,9 +17,11 @@ namespace TestApp.Pages
             _logger = logger;
         }
 
+        public string Greet { get; set; }
+
         public void OnGet()
         {
-
+            Greet = "Hey There!";
         }
     }
 }
