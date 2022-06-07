@@ -17,9 +17,10 @@ namespace TestApp.Pages
             _logger = logger;
         }
 
-        string name = "The Wizard";
-        int age = 580;
-        string favPower = "Confundo";
+        readonly string name = "The Wizard";
+        readonly string username = "TheWhiteWizard";
+        readonly int age = 580;
+        readonly string favPower = "Confundo";
         List<string> powers = new List<string>()
         {
           "Expelliarmus",
@@ -39,17 +40,18 @@ namespace TestApp.Pages
         };
 
         public string Greet { get; set; }
-        public string FavoritePower { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
+        //public string FavoritePower { get; set; }
+        //public string Name { get; set; }
+        //public int Age { get; set; }
         public List<string> Powers { get; set; }
 
         public void OnGet()
         {
             Greet = "Hey There!";
-            Name = name;
-            Age = age;
-            FavoritePower = favPower;
+            @ViewData["myName"] = name;
+            ViewData["username"] = username;
+            @ViewData["myAge"] = age;
+            @ViewData["FavoritePower"] = favPower;
             Powers = powers;
         }
     }
