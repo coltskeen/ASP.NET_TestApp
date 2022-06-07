@@ -35,14 +35,14 @@
             {
              <p>I don't have a favorite spell - I love them all!</p>
             }
-    <p>
-        My top powers are:
-        <ul>
-        @foreach(string p in powers)
-                {
-                 <p>@p</p>
-                }
-        </ul>
-    </p>
 </div>
+<p>
+    My top powers are:
+</p>
+<ul>
+@foreach(string p in powers)
+        {
+            <li>@p</li>
+        }
+</ul>
 
