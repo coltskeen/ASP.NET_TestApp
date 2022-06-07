@@ -17,11 +17,40 @@ namespace TestApp.Pages
             _logger = logger;
         }
 
+        string name = "The Wizard";
+        int age = 580;
+        string favPower = "Confundo";
+        List<string> powers = new List<string>()
+        {
+          "Expelliarmus",
+          "Lumos",
+          "Sectumsempra",
+          "Wingardium Leviosa",
+          "Petrificus Totalus",
+          "Crucio",
+          "Alohomora",
+          "Accio",
+          "Riddikulus",
+          "Reparo",
+          "Avada Kedavra",
+          "Obliviate",
+          "Confundo",
+          "Expecto Patronum"
+        };
+
         public string Greet { get; set; }
+        public string FavoritePower { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public List<string> Powers { get; set; }
 
         public void OnGet()
         {
             Greet = "Hey There!";
+            Name = name;
+            Age = age;
+            FavoritePower = favPower;
+            Powers = powers;
         }
     }
 }
