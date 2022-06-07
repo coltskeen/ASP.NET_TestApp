@@ -4,10 +4,19 @@
     ViewData["Title"] = "Home page";
     string name = "The Wizard";
     int age = 580;
+    string power = "Expelliarmus";
 }
 
 <div class="text-center">
     <h1 class="display-4">@Model.Greet</h1>
     <p>My name is @name and I am @age years old. So I know a thing or two about this world. </p>
+    @if(power == "Expelliarmus")
+    {
+     <p>Favorite Spell: @power</p>
+    }
+    else
+    {
+     <p>I don't have a favorite spell - I love them all!</p>
+    }
 </div>
 
